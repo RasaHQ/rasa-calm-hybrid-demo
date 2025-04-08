@@ -1,0 +1,15 @@
+calm-demo-nlu-llm-hybrid
+Copyright © 2025 Rasa Technologies, Inc
+
+This project is a reference Rasa assistant demonstrating hybrid conversational architecture using CALM flows, NLU triggers, and selective LLM integration. It is designed for public learning, prototyping, and teaching use cases.
+
+---
+
+## License Summary
+
+This repository is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+
+You are free to:
+- Use the material in both non-commercial and commercial settings
+- Copy, adapt, and redistribute the content
+- Incorporate it into teaching curricula, tutorials, applications, or derivative projects
