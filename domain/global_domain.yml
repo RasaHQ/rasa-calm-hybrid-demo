@@ -1,0 +1,16 @@
+version: "3.1"
+
+#actions:
+#  - asdf
+#
+#entities:
+#  - asdf
+
+intents:
+  - nlu-check_account_balance
+  - nlu-find_nearby_atm
+  - nlu-inquire_about_fees
+  - nlu-replace_card
+  - nlu-report_transaction_issue
+  - nlu-request_customer_support
+  - nlu-update_account_info

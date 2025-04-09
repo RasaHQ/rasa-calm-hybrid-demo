@@ -1,0 +1,9 @@
+# data/nlu/triggers/nlu-update_account_info.yml
+version: "3.1"
+nlu:
+- intent: nlu-update_account_info
+  examples: |
+    - I want to change my phone number
+    - Update my email address
+    - I need to change my login info
+    - Help me update my account settings

@@ -1,0 +1,11 @@
+# data/flows/flow-inquire_about_fees.yml
+version: "3.1"
+
+flows:
+  flow-inquire_about_fees:
+    name: inquire about fees
+    description: Asks about fees, penalties, or interest charges applied to an account, often mentioning specific terms like overdraft or late fees.
+#    nlu_trigger:
+#      - intent: nlu-inquire_about_fees
+    steps:
+      - action: utter_intro-inquire_about_fees

@@ -1,0 +1,11 @@
+# data/flows/flow-replace_card.yml
+version: "3.1"
+
+flows:
+  flow-replace_card:
+    name: replace card
+    description: Indicates a lost, stolen, damaged, or expired card and seeks help with issuing a replacement.
+#    nlu_trigger:
+#      - intent: nlu-replace_card
+    steps:
+      - action: utter_intro-replace_card

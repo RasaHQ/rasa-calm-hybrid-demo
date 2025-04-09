@@ -1,0 +1,9 @@
+# data/nlu/triggers/nlu-report_transaction_issue.yml
+version: "3.1"
+nlu:
+- intent: nlu-report_transaction_issue
+  examples: |
+    - I don't recognize this transaction
+    - There's a suspicious charge on my account
+    - I need to dispute a transaction
+    - Help me with a billing issue

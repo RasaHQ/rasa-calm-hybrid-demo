@@ -1,0 +1,9 @@
+# data/nlu/triggers/nlu-inquire_about_fees.yml
+version: "3.1"
+nlu:
+- intent: nlu-inquire_about_fees
+  examples: |
+    - Why was I charged a fee?
+    - Tell me about overdraft fees
+    - What are the interest rates?
+    - I don’t understand this charge

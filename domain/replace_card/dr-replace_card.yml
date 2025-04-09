@@ -1,0 +1,6 @@
+# domain/replace_card/dr-replace_card.yml
+version: "3.1"
+
+responses:
+  utter_intro-replace_card:
+    - text: "I'm sorry to hear that. Let's get started with replacing your card."

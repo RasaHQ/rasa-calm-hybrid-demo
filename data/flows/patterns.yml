@@ -1,0 +1,60 @@
+flows:
+  pattern_chitchat:
+    description: Conversation repair flow for off-topic interactions that won't disrupt the main conversation
+    name: pattern chitchat
+    steps:
+      - action: utter_cannot_handle
+
+
+  pattern_collect_information:
+    description: Flow for collecting information from users
+    name: pattern collect information
+    steps:
+      - id: start
+        action: action_run_slot_rejections
+      - action: validate_{{context.collect}}
+        next:
+          - if: "slots.{{context.collect}} is not null"
+            then: END
+          - else: ask_collect
+      - id: ask_collect
+        action: "{{context.utter}}"
+      - action: "{{context.collect_action}}"
+      - action: action_listen
+        next: start
+
+  pattern_completed:
+    description: Flow that asks if the user needs more help after completing their initiated use cases
+    name: pattern completed
+    steps:
+      - noop: true
+        next:
+          - if: "context.previous_flow_name == 'check account balance'"
+            then: END
+          - if: "context.previous_flow_name == 'find nearby atm'"
+            then: END
+          - if: "context.previous_flow_name == 'inquire about fees'"
+            then: END
+          - if: "context.previous_flow_name == 'replace card'"
+            then: END
+          - if: "context.previous_flow_name == 'report transaction issue'"
+            then: END
+          - if: "context.previous_flow_name == 'request customer support'"
+            then: END
+          - if: "context.previous_flow_name == 'update account info'"
+            then: END
+          - else:
+              - action: utter_can_do_something_else
+                next: END
+
+#  pattern_completed:
+#    description: Flow that asks if the user needs more help after completing their initiated use cases
+#    name: pattern completed
+#    steps:
+#      - action: utter_can_do_something_else
+
+  pattern_search:
+    description: Flow for handling knowledge-based questions
+    name: pattern search
+    steps:
+      - action: utter_no_knowledge_base

@@ -1,0 +1,9 @@
+# data/nlu/triggers/nlu-request_customer_support.yml
+version: "3.1"
+nlu:
+- intent: nlu-request_customer_support
+  examples: |
+    - I need to talk to someone
+    - Connect me to customer service
+    - How can I speak to a representative?
+    - I want to talk to support

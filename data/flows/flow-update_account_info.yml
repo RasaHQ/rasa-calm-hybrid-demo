@@ -1,0 +1,11 @@
+# data/flows/flow-update_account_info.yml
+version: "3.1"
+
+flows:
+  flow-update_account_info:
+    name: update account info
+    description: Mentions changes to personal or account preferences like contact information, login credentials, or notification settings.
+#    nlu_trigger:
+#      - intent: nlu-update_account_info
+    steps:
+      - action: utter_intro-update_account_info

@@ -1,0 +1,11 @@
+# data/flows/flow-find_nearby_atm.yml
+version: "3.1"
+
+flows:
+  flow-find_nearby_atm:
+    name: find nearby atm
+    description: Seeks nearby ATM locations or asks about available cash withdrawal points based on location or availability.
+#    nlu_trigger:
+#      - intent: nlu-find_nearby_atm
+    steps:
+      - action: utter_intro-find_nearby_atm

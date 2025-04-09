@@ -1,0 +1,9 @@
+# data/nlu/intents/nlu-check_account_balance.yml
+version: "3.1"
+nlu:
+- intent: nlu-check_account_balance
+  examples: |
+    - account balance
+    - What's my account balance?
+    - Can you tell me how much money I have?
+    - I'd like to check my balance

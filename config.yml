@@ -1,10 +1,39 @@
 recipe: default.v1
 language: en
+assistant_id: rasa-calm-hybrid-demo
+
 pipeline:
-  - name: CompactLLMCommandGenerator
-    llm:
-      model_group: openai-gpt-4o
+- name: CompactLLMCommandGenerator
+  llm:
+    model_group: openai-gpt-4o
 
 policies:
-  - name: FlowPolicy
-  - name: IntentlessPolicy
+- name: FlowPolicy
+
+
+#recipe: default.v1
+#language: en
+#pipeline:
+#- name: WhitespaceTokenizer
+#- name: LanguageModelFeaturizer
+#  model_name: "bert"
+#  model_weights: "sentence-transformers/all-MiniLM-L6-v2"
+#- name: "CRFEntityExtractor"
+#- name: LexicalSyntacticFeaturizer
+#- name: CountVectorsFeaturizer
+#- name: LogisticRegressionClassifier
+#- name: EntitySynonymMapper
+##- name: DucklingEntityExtractor
+##  # url of the running duckling server
+##  url: "http://0.0.0.0:8000"
+##  dimensions: ["time", "number", "amount-of-money", "distance", "email"]
+##  locale: "en_US"
+##  timezone: "US/Eastern"
+##  timeout : 3
+#- name: NLUCommandAdapter
+#
+#policies:
+#- name: FlowPolicy
+
+
+

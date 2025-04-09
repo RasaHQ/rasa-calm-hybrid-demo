@@ -1,0 +1,9 @@
+# data/nlu/triggers/nlu-find_nearby_atm.yml
+version: "3.1"
+nlu:
+- intent: nlu-find_nearby_atm
+  examples: |
+    - Where is the nearest ATM?
+    - Find an ATM near me
+    - I need to withdraw cash
+    - Closest ATM location
