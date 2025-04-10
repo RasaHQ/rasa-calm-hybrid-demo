@@ -1,0 +1,6 @@
+# domain/report_transaction_issue/dr-report_transaction_issue.yml
+version: "3.1"
+
+responses:
+  utter_intro-report_transaction_issue:
+    - text: "Let's look into that transaction together. Can you tell me more about the issue?"

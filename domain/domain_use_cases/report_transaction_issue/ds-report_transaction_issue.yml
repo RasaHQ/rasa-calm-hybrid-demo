@@ -1,0 +1,26 @@
+#version: "3.1"
+#
+#
+#slots:
+#  add_contact_confirmation:
+#    type: bool
+#    mappings:
+#      - type: from_entity
+#        entity: add_contact_confirmation
+#      - type: from_intent
+#        value: true
+#        intent: affirm
+#      - type: from_intent
+#        value: false
+#        intent: deny
+#  add_contact_name:
+#    type: text
+#    mappings:
+#      - type: from_entity
+#        entity: name
+#  add_contact_handle:
+#    type: text
+#    mappings:
+#      - type: from_entity
+#        entity: handle
+#

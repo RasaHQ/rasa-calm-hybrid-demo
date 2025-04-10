@@ -1,0 +1,6 @@
+# domain/inquire_about_fees/dr-inquire_about_fees.yml
+version: "3.1"
+
+responses:
+  utter_intro-inquire_about_fees:
+    - text: "I can help clarify any fees or interest charges. Do you have a specific charge or account in mind?"

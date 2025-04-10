@@ -1,0 +1,6 @@
+# domain/find_nearby_atm/dr-find_nearby_atm.yml
+version: "3.1"
+
+responses:
+  utter_intro-find_nearby_atm:
+    - text: "Sure, I can help you find the nearest ATM. Could you please share your current location?"

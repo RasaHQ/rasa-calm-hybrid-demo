@@ -1,0 +1,49 @@
+version: "3.1"
+
+#actions:
+#  - asdf
+#
+#entities:
+#  - asdf
+
+intents:
+  - nlu-check_account_balance
+  - nlu-find_nearby_atm
+  - nlu-inquire_about_fees
+  - nlu-replace_card
+  - nlu-report_transaction_issue
+  - nlu-request_customer_support
+  - nlu-update_account_info
+
+responses:
+  utter_clarify-user_intent:
+    - text: "utter_clarify_user_intent"
+#        I'm not quite sure what you meant. Are you asking about:
+#        1. Your account balance
+#        2. A suspicious charge
+#        3. A service fee
+#        4. Something else?
+#        Just let me know!
+########################################################################################
+
+# DISABLED for now
+#  utter_clarify-check_account_balance:
+#    - text: "Just to make sure I understand—are you trying to check how much money is currently in your account?"
+#
+#  utter_clarify-find_nearby_atm:
+#    - text: "Got it. Are you looking for a nearby ATM to withdraw cash, or are you having an issue with your card or payment?"
+#
+#  utter_clarify-inquire_about_fees:
+#    - text: "Are you asking about a regular fee—like an overdraft or service charge—or is this about a charge you didn’t expect or don’t recognize?"
+#
+#  utter_clarify-replace_card:
+#    - text: "Sounds like there’s an issue with your card. Do you need to order a replacement, or are you trying to resolve a recent card-related problem?"
+#
+#  utter_clarify-report_transaction_issue:
+#    - text: "I noticed you mentioned a charge that seemed unusual—do you think it might be unauthorized or incorrect, or are you just unsure what it’s for?"
+#
+#  utter_clarify-request_customer_support:
+#    - text: "Would you like to speak with a live support representative, or are you looking for help with something specific right now?"
+#
+#  utter_clarify-update_account_info:
+#    - text: "Are you trying to update your account details, like your phone number or email address? Or are you having trouble logging in or receiving messages?"

@@ -1,0 +1,6 @@
+# domain/find_nearby_atm/dr-check_account_balance.yml
+version: "3.1"
+
+responses:
+  utter_intro-check_account_balance:
+    - text: "Sure, I can help you check your account balance. Just a moment..."

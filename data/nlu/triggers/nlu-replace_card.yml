@@ -1,0 +1,9 @@
+# data/nlu/triggers/nlu-replace_card.yml
+version: "3.1"
+nlu:
+- intent: nlu-replace_card
+  examples: |
+    - I lost my card
+    - My card isn’t working
+    - Replace my debit card
+    - I need a new credit card

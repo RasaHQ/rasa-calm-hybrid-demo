@@ -1,0 +1,11 @@
+# data/flows/flow-clarify_user_intent.yml
+version: "3.1"
+
+flows:
+  flow-clarify_user_intent:
+    name: clarify user intent
+    description: |
+      Helps clarify user intent when a message is ambiguous or unclear. Offers flow options based on common misunderstandings.
+    if: false
+    steps:
+      - action: utter_clarify-user_intent

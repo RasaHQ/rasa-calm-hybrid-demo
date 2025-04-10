@@ -1,0 +1,6 @@
+# domain/update_account_info/dr-update_account_info.yml
+version: "3.1"
+
+responses:
+  utter_intro-update_account_info:
+    - text: "No problem. I can help you update your account information. What would you like to change?"

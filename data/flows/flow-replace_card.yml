@@ -1,0 +1,14 @@
+# data/flows/flow-replace_card.yml
+version: "3.1"
+
+flows:
+  flow-replace_card:
+    name: replace card
+    description: |
+      Requests a replacement for a lost, stolen, expired, or damaged card. Typical phrases include “lost my card,” “need a new card,” “card isn’t working,” or “card is expired.” Does not cover declined transactions or fraud concerns.
+#    description: Mentions a lost, stolen, damaged, or expired card—typically asking for a replacement, not reporting a transaction issue or ATM failure.
+#    description: Indicates a lost, stolen, damaged, or expired card and seeks help with issuing a replacement.
+#    nlu_trigger:
+#      - intent: nlu-replace_card
+    steps:
+      - action: utter_intro-replace_card

@@ -1,0 +1,6 @@
+# domain/request_customer_support/dr-request_customer_support.yml
+version: "3.1"
+
+responses:
+  utter_intro-request_customer_support:
+    - text: "I can connect you to customer support. Would you prefer phone, chat, or email assistance?"
