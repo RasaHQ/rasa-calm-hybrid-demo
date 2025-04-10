@@ -4,7 +4,10 @@ version: "3.1"
 flows:
   flow-update_account_info:
     name: update account info
-    description: Mentions changes to personal or account preferences like contact information, login credentials, or notification settings.
+    description: |
+      Requests to update contact info, login credentials, address, or account settings. Cue phrases: “change my email,” “update phone number,” “change password,” or “edit my profile.” Excludes support requests, card problems, or login errors due to fraud.
+#    description: Requests to update personal or account details such as contact info, login credentials, or notification settings—not related to fraud, card issues, or support access.
+#    description: Mentions changes to personal or account preferences like contact information, login credentials, or notification settings.
 #    nlu_trigger:
 #      - intent: nlu-update_account_info
     steps:

@@ -2,6 +2,8 @@
 
 Demonstrates how to combine NLU-triggered flows with LLM-assisted dialog for regulated environments.
 
+*NOTE: Implementation approach & project details may be adjusted based on testing outcomes and evolving priorities.*
+
 ---
 
 ## 🔑 Key Features
@@ -10,7 +12,6 @@ Demonstrates how to combine NLU-triggered flows with LLM-assisted dialog for reg
 - 🤖 **Hybrid Architecture** — Combines NLU-only flows with selective LLM integrations.
 - 🧪 **Testable Design** — Includes end-to-end tests for verifying core interactions.
 - 📚 **Realistic Financial Use Cases** — Covers account balance, card replacement, disputes, fees, and more.
-
 ---
 
 ## 📁 Included Use Cases
@@ -22,6 +23,34 @@ Demonstrates how to combine NLU-triggered flows with LLM-assisted dialog for reg
 - `nlu_atm_find`
 - `nlu_contact_us`
 - `nlu_fees_interest_inquiry`
+
+---
+
+## 🏗️ Basic Project Structure
+```
+rasa-calm-hybrid-demo/
+├── actions/
+├── data/
+│   ├── flows/
+│   │   ├── flow-<use_case>.yml
+│   │   ├── patterns.yml
+│   │   └── subflows/
+│   │       ├── _shared/
+│   │       └── <use_case>/...
+│   └── nlu/
+│       ├── general/
+│       └── triggers/
+│           └── nlu-<use_case>.yml
+├── domain/
+│   ├── global_domain.yml
+│   └── domain_use_cases/
+│       └── <use_case>/
+│           ├── dr-<use_case>.yml
+│           └── ds-<use_case>.yml
+├── tests/
+│   └── e2e_test_cases.yml
+└── config.yml + endpoints.yml + README.md
+```
 
 ---
 
@@ -46,21 +75,3 @@ uv pip install rasa-pro  # Rasa Pro License required
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC--BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 🧾 Attribution for Users
-
-This project is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
-
-If you use, adapt, or redistribute this assistant in your own work, please include the following attribution:
-
-    “This project is based on the rasa-calm-hybrid-demo assistant, originally created by Rasa Technologies, Inc. and licensed under CC BY 4.0.”
-
-You must:
-
-    Credit Rasa Technologies, Inc.
-    Provide a link to this repository
-    Indicate if changes were made (e.g., “Modified for internal use”)
-
-Attribution can be included in your:
-
-    README.md
-    Course materials or documentation
-    Application UI (if applicable)

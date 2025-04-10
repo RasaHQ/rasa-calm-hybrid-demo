@@ -1,0 +1,332 @@
+test_cases:
+  # ## Check Account Balance: Includes simple, paraphrased, and long-form requests to check account balance.
+  - test_case: test_01-check_account_balance
+    steps:
+      - user: What’s my account balance?
+      - utter: utter_intro-check_account_balance
+
+  - test_case: test_02-check_account_balance
+    steps:
+      - user: Can you show me my balance?
+      - utter: utter_intro-check_account_balance
+
+  - test_case: test_03-check_account_balance
+    steps:
+      - user: I want to check how much money I have
+      - utter: utter_intro-check_account_balance
+
+  - test_case: test_04-check_account_balance
+    steps:
+      - user: Tell me how much is left in my account
+      - utter: utter_intro-check_account_balance
+
+  - test_case: test_05-check_account_balance
+    steps:
+      - user: Hey, I was just wondering if you could help me figure out how much money I currently have in my checking account.
+      - utter: utter_intro-check_account_balance
+
+  - test_case: test_06-check_account_balance
+    steps:
+      - user: Hi! I’m trying to get an idea of my finances today—could you check my balance and let me know what’s there?
+      - utter: utter_intro-check_account_balance
+
+  - test_case: test_07-check_account_balance
+    steps:
+      - user: I need to check my balance and see how much is in my account
+      - utter: utter_intro-check_account_balance
+
+  # ## Find Nearby ATM: Covers ATM location queries using varied phrasing and intent strength.
+  - test_case: test_08-find_nearby_atm
+    steps:
+      - user: Where’s the nearest ATM?
+      - utter: utter_intro-find_nearby_atm
+
+  - test_case: test_09-find_nearby_atm
+    steps:
+      - user: Find an ATM near me
+      - utter: utter_intro-find_nearby_atm
+
+  - test_case: test_10-find_nearby_atm
+    steps:
+      - user: Is there an ATM close by?
+      - utter: utter_intro-find_nearby_atm
+
+  - test_case: test_11-find_nearby_atm
+    steps:
+      - user: I’m looking for a place to withdraw cash nearby
+      - utter: utter_intro-find_nearby_atm
+
+  - test_case: test_12-find_nearby_atm
+    steps:
+      - user: I need to get some cash but I don’t want to go far
+      - utter: utter_intro-find_nearby_atm
+
+  - test_case: test_13-find_nearby_atm
+    steps:
+      - user: Hey, I’m out running errands and realized I need to grab some cash—can you tell me where I can find an ATM nearby?
+      - utter: utter_intro-find_nearby_atm
+
+  - test_case: test_14-find_nearby_atm
+    steps:
+      - user: I’m headed downtown later and would love to know if there’s an ATM around that area
+      - utter: utter_intro-find_nearby_atm
+
+  - test_case: test_15-find_nearby_atm
+    steps:
+      - user: Can I pull cash from somewhere without going into a branch?
+      - utter: utter_intro-find_nearby_atm
+
+  - test_case: test_16-find_nearby_atm
+    steps:
+      - user: I’m looking for a nearby ATM — I need to get some cash out right now.
+      - utter: utter_intro-find_nearby_atm
+
+  # ## Inquire About Fees: Includes questions about overdrafts, service charges, late fees, and vague billing concerns.
+  - test_case: test_17-inquire_about_fees
+    steps:
+      - user: What are the fees on my account?
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_18-inquire_about_fees
+    steps:
+      - user: Can you explain why I was charged an overdraft fee?
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_19-inquire_about_fees
+    steps:
+      - user: I’m trying to figure out why I was charged a fee
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_20-inquire_about_fees
+    steps:
+      - user: I noticed a service fee—what's that about?
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_21-inquire_about_fees
+    steps:
+      - user: There’s a late payment fee on my statement, but I thought I paid on time.
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_22-inquire_about_fees
+    steps:
+      - user: I reviewed my account and there are some interest charges I don’t understand.
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_23-inquire_about_fees
+    steps:
+      - user: I’m trying to make sense of why I was billed extra this month. There’s a fee I don’t recognize at all.
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_24-inquire_about_fees
+    steps:
+      - user: I think I got hit with a fee, but I’m not totally sure — can you help me check?
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_25-inquire_about_fees
+    steps:
+      - user: I noticed a service fee on my account and I’m not sure what it’s for.
+      - utter: utter_intro-inquire_about_fees
+
+  - test_case: test_26-inquire_about_fees
+    steps:
+      - user: I was charged a service fee and want to understand what it’s for
+      - utter: utter_intro-inquire_about_fees
+
+  # ## Replace Card: Includes lost, stolen, damaged, or expired card requests.
+  - test_case: test_27-replace_card
+    steps:
+      - user: I lost my debit card
+      - utter: utter_intro-replace_card
+
+  - test_case: test_28-replace_card
+    steps:
+      - user: I need a new card
+      - utter: utter_intro-replace_card
+
+  - test_case: test_29-replace_card
+    steps:
+      - user: My card isn’t working anymore, can I get a replacement?
+      - utter: utter_intro-replace_card
+
+  - test_case: test_30-replace_card
+    steps:
+      - user: Can you help me order a new card?
+      - utter: utter_intro-replace_card
+
+  - test_case: test_31-replace_card
+    steps:
+      - user: I’m having trouble with my card and I think I might need a new one
+      - utter: utter_intro-replace_card
+
+  - test_case: test_32-replace_card
+    steps:
+      - user: Hey, I think I lost my card yesterday and I’m not sure where. Can you help me get a new one?
+      - utter: utter_intro-replace_card
+
+  - test_case: test_33-replace_card
+    steps:
+      - user: So I went to use my card at the grocery store and it just wouldn’t go through—I think it’s damaged. What do I need to do to get another one?
+      - utter: utter_intro-replace_card
+
+  - test_case: test_34-replace_card
+    steps:
+      - user: My card is either lost or broken — I think I need to request a new one.
+      - utter: utter_intro-replace_card
+
+  - test_case: test_35-replace_card
+    steps:
+      - user: I couldn’t pay with my card today — I think it might be damaged and need replacing.
+      - utter: utter_intro-replace_card
+
+  - test_case: test_36-replace_card
+    steps:
+      - user: My card isn’t working anymore and I need a replacement
+      - utter: utter_intro-replace_card
+
+  # ## Report Transaction Issue: Disputes, fraud, and mistaken charges.
+  - test_case: test_37-report_transaction_issue
+    steps:
+      - user: I want to report a suspicious charge
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_38-report_transaction_issue
+    steps:
+      - user: There’s a transaction on my account I didn’t make
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_39-report_transaction_issue
+    steps:
+      - user: I need to dispute a charge
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_40-report_transaction_issue
+    steps:
+      - user: I noticed a payment I don’t recognize
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_41-report_transaction_issue
+    steps:
+      - user: Something’s off with my recent transactions — I think a charge went through that shouldn’t have.
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_42-report_transaction_issue
+    steps:
+      - user: Hi, I was just reviewing my account and saw a charge that I’m pretty sure I didn’t authorize. Can you look into it for me?
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_43-report_transaction_issue
+    steps:
+      - user: So I was checking my statement and there’s a weird charge from a store I’ve never been to. I’m worried it might be fraud.
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_44-report_transaction_issue
+    steps:
+      - user: I saw a bunch of transactions I don’t remember — can we check for anything suspicious?
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_45-report_transaction_issue
+    steps:
+      - user: There’s a $50 charge I don’t recognize — I think it might be a mistake or fraud.
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_46-report_transaction_issue
+    steps:
+      - user: I didn’t make this $50 charge—it looks unauthorized and I need to report it
+      - utter: utter_intro-report_transaction_issue
+
+  - test_case: test_47-report_transaction_issue
+    steps:
+      - user: My account’s acting weird—there’s a bunch of stuff I don’t remember paying for
+      - utter: utter_intro-report_transaction_issue
+
+  # ## Request Customer Support: Escalation and live assistance requests.
+  - test_case: test_48-request_customer_support
+    steps:
+      - user: I want to talk to customer service
+      - utter: utter_intro-request_customer_support
+
+  - test_case: test_49-request_customer_support
+    steps:
+      - user: Connect me to support
+      - utter: utter_intro-request_customer_support
+
+  - test_case: test_50-request_customer_support
+    steps:
+      - user: How can I reach a representative?
+      - utter: utter_intro-request_customer_support
+
+  - test_case: test_51-request_customer_support
+    steps:
+      - user: I need help from someone on your team
+      - utter: utter_intro-request_customer_support
+
+  - test_case: test_52-request_customer_support
+    steps:
+      - user: I’m having an issue and need to speak to someone
+      - utter: utter_intro-request_customer_support
+
+  - test_case: test_53-request_customer_support
+    steps:
+      - user: Hi there, I’ve been trying to resolve something and honestly I think I just need to talk to a real person. Can you help?
+      - utter: utter_intro-request_customer_support
+
+  - test_case: test_54-request_customer_support
+    steps:
+      - user: I’ve looked through all the options and nothing is helping—can I just get in touch with a support agent?
+      - utter: utter_intro-request_customer_support
+
+  - test_case: test_55-request_customer_support
+    steps:
+      - user: This is getting really confusing—I’d rather talk to someone directly instead of trying to explain it here
+      - utter: utter_intro-request_customer_support
+
+  - test_case: test_56-request_customer_support
+    steps:
+      - user: I’m frustrated and nothing is helping—can I talk to someone in customer service?
+      - utter: utter_intro-request_customer_support
+
+  # ## Update Account Info: Contact info, profile updates, and personal detail changes.
+  - test_case: test_57-update_account_info
+    steps:
+      - user: I need to update my contact information
+      - utter: utter_intro-update_account_info
+
+  - test_case: test_58-update_account_info
+    steps:
+      - user: I need to update my contact info — like my phone number and maybe email.
+      - utter: utter_intro-update_account_info
+
+  - test_case: test_59-update_account_info
+    steps:
+      - user: Help me edit my account settings
+      - utter: utter_intro-update_account_info
+
+  - test_case: test_60-update_account_info
+    steps:
+      - user: I’d like to update my profile info
+      - utter: utter_intro-update_account_info
+
+  - test_case: test_61-update_account_info
+    steps:
+      - user: Hey, I recently moved and I think I need to update my address and maybe some other stuff on my account—can you help with that?
+      - utter: utter_intro-update_account_info
+
+  - test_case: test_62-update_account_info
+    steps:
+      - user: I realized my email and phone number are outdated on my profile. Can I update those here?
+      - utter: utter_intro-update_account_info
+
+  - test_case: test_63-update_account_info
+    steps:
+      - user: I think some of my personal info is wrong. Maybe my contact or login stuff?
+      - utter: utter_intro-update_account_info
+
+  - test_case: test_64-update_account_info
+    steps:
+      - user: I need to update my login and change the email connected to my account
+      - utter: utter_intro-update_account_info
+
+  - test_case: test_65-update_account_info
+    steps:
+      - user: I want to change my account details
+      - utter: utter_intro-update_account_info

@@ -4,7 +4,10 @@ version: "3.1"
 flows:
   flow-report_transaction_issue:
     name: report transaction issue
-    description: Raises concerns about a suspicious or incorrect charge and asks for help disputing or investigating the transaction.
+    description: |
+      Reports unauthorized, incorrect, or duplicate charges—often perceived as fraud or billing errors. Look for phrases like “fraud,” “unauthorized,” “charged twice,” “I didn’t make this,” or “dispute this charge.” Does not include questions about legitimate fees.
+#    description: Raises concerns about unauthorized, duplicate, or incorrect charges—often perceived as fraud or billing errors requiring investigation.
+#    description: Raises concerns about a suspicious or incorrect charge and asks for help disputing or investigating the transaction.
 #    nlu_trigger:
 #      - intent: nlu-report_transaction_issue
     steps:

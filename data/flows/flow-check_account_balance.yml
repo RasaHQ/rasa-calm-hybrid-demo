@@ -4,8 +4,11 @@ version: "3.1"
 flows:
   flow-check_account_balance:
     name: check account balance
-    description: Requests a balance for a specific account, such as checking, savings, or credit, often following a short, direct inquiry.
-#    nlu_trigger:
-#      - intent: nlu-check_account_balance
+    description: |
+      Requests the current balance for an account, such as checking, savings, or credit. Common phrases include “how much money,” “what’s left,” “check balance,” or “see my funds.” Excludes issues related to fees, charges, or transactions.
+#    description: Requests the current balance for an account, such as checking, savings, or credit—typically using phrases like "money left", "how much do I have", "what’s left in my account", or vaguely saying "my account" without specifying "balance".
+#    description: Requests a balance for a specific account, such as checking, savings, or credit, often following a short, direct inquiry.
+    nlu_trigger:
+      - intent: nlu-check_account_balance
     steps:
       - action: utter_intro-check_account_balance

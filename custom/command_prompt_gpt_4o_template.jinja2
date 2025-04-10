@@ -1,0 +1,64 @@
+## Task Description
+Your task is to analyze the user's latest message and select the most appropriate flow by matching it to a flow description. Use the provided flow descriptions and keyword cues to determine intent. If there is no strong match, disambiguate flows to offer top candidates.
+
+---
+
+## Available Flows and Slots
+Use the following structured data:
+```json
+{"flows":[{% for flow in available_flows %}{"name":"{{ flow.name }}","description":{{ flow.description | to_json_escaped_string }}{% if flow.slots %},"slots":[{% for slot in flow.slots %}{"name":"{{ slot.name }}"{% if slot.description %},"description":{{ slot.description | to_json_escaped_string }}{% endif %}{% if slot.allowed_values %},"allowed_values":{{ slot.allowed_values }}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]}
+```
+
+---
+
+## Available Actions:
+* `start flow flow_name`: Starting a flow. For example, `start flow transfer_money` or `start flow list_contacts`.
+* `set slot slot_name slot_value`: Slot setting. For example, `set slot transfer_money_recipient Freddy`. Can be used to correct and change previously set values.
+* `cancel flow`: Cancelling the current flow.
+* `disambiguate flows flow_name1 flow_name2 ... flow_name_n`: Disambiguate which flow should be started when user input is ambiguous by listing the potential flows as options. For example, `disambiguate flows list_contacts add_contact remove_contact ...` if the user just wrote "contacts".
+* `provide info`: Responding to the user's questions by supplying relevant information, such as answering FAQs or explaining services.
+* `offtopic reply`: Responding to casual or social user messages that are unrelated to any flows, engaging in friendly conversation and addressing off-topic remarks.
+
+---
+
+## General Tips
+* Do not fill slots with abstract values or placeholders.
+* For categorical slots try to match the user message with allowed slot values. Use "other" if you cannot match it.
+* Set the boolean slots based on the user response. Map positive responses to `True`, and negative to `False`.
+* Extract text slot values exactly as provided by the user. Avoid assumptions, format changes, or partial extractions.
+* Only use information provided by the user.
+* Disambiguate flows (flow_name1 flow_name2 ... flow_name_n`) if multiple flows strongly match.
+* If the user message could match multiple flows, use disambiguate flows flow_name1 flow_name2 ... to let the assistant clarify before deciding.
+* Use clarification flows (like flow-clarify_x) if the user’s message is mostly aligned with one intent but missing details or slightly vague.
+* If the user's request strongly matches a known flow, prefer starting that flow directly.
+* Choose the best-fitting flow using cue words, excluded terms, and intent signals in the flow descriptions.
+* Multiple flows can be started. If a user wants to digress into a second flow, you do not need to cancel the current flow.
+* Do not cancel the flow unless the user explicitly requests it.
+* Strictly adhere to the provided action format.
+* Focus on the last message and take it one step at a time.
+* Use the previous conversation steps only to aid understanding.
+
+---
+
+## Current State
+{% if current_flow != None %}Use the following structured data:
+```json
+{"active_flow":"{{ current_flow }}","current_step":{"requested_slot":"{{ current_slot }}","requested_slot_description":{{ current_slot_description | to_json_escaped_string }}},"slots":[{% for slot in flow_slots %}{"name":"{{ slot.name }}","value":"{{ slot.value }}","type":"{{ slot.type }}"{% if slot.description %},"description":{{ slot.description | to_json_escaped_string }}{% endif %}{% if slot.allowed_values %},"allowed_values":"{{ slot.allowed_values }}"{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]}
+```{% else %}
+You are currently not inside any flow.{% endif %}
+
+---
+
+## Conversation History
+{{ current_conversation }}
+
+---
+
+## Task
+1. Check if the message matches a flow based on its intent signals, keywords, and examples in the flow descriptions.
+2. If you detect multiple strong candidates, list them in disambiguate flows.
+3. If the message is ambiguous but related to a known flow, prefer triggering the matching flow-clarify_<flow>
+4. Create an action list with one action per line in response to the user's last message: """{{ user_message }}""".
+
+
+Your action list:

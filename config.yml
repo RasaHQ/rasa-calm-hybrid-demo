@@ -4,8 +4,16 @@ assistant_id: rasa-calm-hybrid-demo
 
 pipeline:
 - name: CompactLLMCommandGenerator
+  prompt_template: custom/command_prompt_gpt_4o_template.jinja2
   llm:
     model_group: openai-gpt-4o
+
+#pipeline:
+#  - name: CompactLLMCommandGenerator
+#    prompt: custom/command_prompt_gpt_4o_template.jinja2
+#    llm:
+#      model_name: gpt-4o-2024-11-20
+#      provider: openai
 
 policies:
 - name: FlowPolicy

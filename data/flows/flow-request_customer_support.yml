@@ -4,7 +4,10 @@ version: "3.1"
 flows:
   flow-request_customer_support:
     name: request customer support
-    description: Requests to speak with customer service or asks how to reach a live representative through phone or other channels.
+    description: |
+      Requests to speak with a live representative or reach customer service. Trigger phrases include “talk to someone,” “speak to a human,” “get support,” “call customer service.” Does not apply to general confusion, complaints, or vague frustration.
+#    description: Explicitly asks to speak with a live representative or contact customer service—typically using phrases like "talk to someone" or "call support," not just expressing confusion or frustration.
+#    description: Requests to speak with customer service or asks how to reach a live representative through phone or other channels.
 #    nlu_trigger:
 #      - intent: nlu-request_customer_support
     steps:

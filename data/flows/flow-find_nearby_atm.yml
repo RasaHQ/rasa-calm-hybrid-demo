@@ -4,7 +4,10 @@ version: "3.1"
 flows:
   flow-find_nearby_atm:
     name: find nearby atm
-    description: Seeks nearby ATM locations or asks about available cash withdrawal points based on location or availability.
+    description: |
+      Looks for ATM or cash machine locations nearby. Trigger phrases include “find ATM,” “withdraw cash,” “near me,” or “closest machine.” Does not apply to card problems or failed withdrawals.
+#    description: Looks for nearby ATMs or cash machines—often triggered by requests to "find an ATM" or "withdraw cash nearby," not card issues or general cash access problems. Do not confuse with card issues or general "I need cash" requests. ATM-specific intent should be more prominent.
+#    description: Seeks nearby ATM locations or asks about available cash withdrawal points based on location or availability.
 #    nlu_trigger:
 #      - intent: nlu-find_nearby_atm
     steps:

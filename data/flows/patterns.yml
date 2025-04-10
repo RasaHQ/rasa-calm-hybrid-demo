@@ -1,4 +1,29 @@
 flows:
+  pattern_cannot_handle:
+    description: |
+      Conversation repair flow for addressing failed command generation scenarios
+    name: pattern cannot handle
+    steps:
+      - noop: true
+        next:
+          # chitchat fallback
+          - if: "'{{context.reason}}' = 'cannot_handle_chitchat'"
+            then:
+              - action: utter_cannot_handle
+                next: "END"
+          # fallback for things that are not supported
+          - if: "'{{context.reason}}' = 'cannot_handle_not_supported'"
+            then:
+              - action: utter_cannot_handle
+                next: END
+          # custom
+          - else:
+              - link: flow-clarify_user_intent
+  #          # default
+#          - else:
+#              - action: utter_ask_rephrase
+#                next: END
+
   pattern_chitchat:
     description: Conversation repair flow for off-topic interactions that won't disrupt the main conversation
     name: pattern chitchat
